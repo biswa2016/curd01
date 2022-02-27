@@ -1,0 +1,27 @@
+<table class="table" >
+    <thead class="thead-dark">
+      <tr>
+          <th>ProductID</th>
+        <th scope="col">name</th>
+        <th scope="col">Describtion</th>
+        <th scope="col">price</th>
+        <th scope="col">Image</th>
+        <th>Remove</th>
+        <th>EDIT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of product">
+        <td>{{u._id}}</td>
+        <td>{{u.productName}}</td>
+        <td>{{u.productDescription}}</td> 
+        <td>{{u.productPrice}}</td>
+        <td><img [src]="u.productImageURL" alt="" height="150px" width="150px"></td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteData(u._id)">Delete</button></td>
+        <td><button class="btn btn-info" [routerLink]="['/edit',u._id]" >Edit</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <button><a routerLink="/add">Add</a> </button>

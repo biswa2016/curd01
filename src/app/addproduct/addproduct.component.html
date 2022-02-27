@@ -1,0 +1,120 @@
+  <!-- <!-- Button trigger modal
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+   Launch demo modal
+ </button>
+
+ <-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container mt-2">
+           <div class="row">
+             <div class="col-md-12 m-auto">
+               <div class="card">
+                 <div class="card-header bg-warning text-white">
+                   <h1>
+                     Add product
+                   </h1>
+                 </div>
+                 <div class="card-body bg-dark text-white ">
+                   <form #loginFrom="ngForm" (ngSubmit)="login(loginFrom)">
+                     <div class="form-group">
+                       <label for="exampleInputEmail1"> Name</label>
+                       <input #name="ngModel" type="name" name="email" class="form-control" id="exampleInputEmail1"
+                         aria-describedby="emailHelp" ngModel>
+
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleInputEmail1">Describtion</label>
+                       <input #email="ngModel" name="eamil" type="email" class="form-control" id="exampleInputEmail1"
+                         aria-describedby="emailHelp" ngModel>
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleInputEmail1">price</label>
+                       <input #des="ngModel" name="des" type="email" class="form-control" id="exampleInputEmail1"
+                         aria-describedby="emailHelp" ngModel>
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleInputPassword1">Image</label>
+                       <input #pass="ngModel" name="pass" type="password" class="form-control"
+                         id="exampleInputPassword1" ngModel>
+                     </div>
+                     <div class="form-group form-check">
+                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                     </div>
+                     <div>
+                      <button class="btn btn-primary float-right" [disabled]="loginFrom.invalid">submit</button>
+
+                     </div>
+                              
+                   </form>
+
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <table class="table table-striped table-inverse table-responsive ">
+   <thead class="thead-inverse bg-dark">
+     <tr>
+       <th>ID</th>
+       <th> Name</th>
+       <th>Describtion</th>
+       <th>price</th>
+       <th>Image</th>
+       <th>Delet</th>
+       <th>Edit</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let u of product">
+       <td>{{u._id}}</td>
+       <td>{{u.productName}}</td>
+       <td>{{u.productDescription}}</td>
+       <td>{{u.productPrice}}</td>
+       <td><img [src]="u.productImageURL" alt=""></td>
+       <td><button type=" submit" (click)="deleteData(u._id)" class="btn btn-outline-danger float-right">Delete</button></td>
+       <td>  <button type="submit" class="btn btn-outline-primary" [routerLink]="['/edit',u._id]" >Edit</button></td>
+     </tr>
+   </tbody>
+ </table> -->
+<h3>hiiiiii</h3>
+ <div class="container">
+  <div class="col-md-6">
+      <div class="card">
+
+          <form #editform="ngForm" (ngSubmit)="edit(editform)">
+              <div>
+                  <label for="">productName</label>
+                  <input #productName="ngModel" name="productName"   type="text"  ngModel>
+              </div>
+              <div>
+                  <label for="">productPrice</label>
+                  <input #productPrice="ngModel" name="productPrice"   type="number" ngModel>
+              </div>
+              <div>
+                  <label for="">productDescription</label>
+                  <input #productDescription="ngModel"    name="productDescription" type="text" ngModel>
+              </div>
+              <div>
+                  <label for="">productImageURL</label>
+                  <input  #productImageURL="ngModel"   name="productImageURL" type="text" ngModel>
+              </div>
+              <button type="submit"  >Submit</button>
+          </form>
+      </div>
+  </div>
+</div> 
